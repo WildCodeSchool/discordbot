@@ -1,0 +1,15 @@
+{
+  "Campus assignment": "Campus assignment",
+  "`!campus xyz firstname lastname`\n- assign you to the campus *XYZ*\n- edit your nickname as *[XYZ] Firstname Lastname*\n\nYou need to choose a campus among: \n%s.": "`!campus xyz firstname lastname`\n- assign you to the campus *XYZ*\n- edit your nickname as *[XYZ] Firstname Lastname*\n\nYou need to choose a campus among: \n%s.",
+  "You can't send command in direct message, please type your command in the `#%s` channel.": "You can't send command in direct message, please type your command in the `#%s` channel.",
+  "You already have a campus assigned, please contact your trainer or campus manager to fix this!": "You already have a campus assigned, please contact your trainer or campus manager to fix this!",
+  "No campus %1$s found among %2$s.": "No campus %1$s found among %2$s.",
+  "Good job %1$s, you've been assigned to campus %2$s.": "Good job %1$s, you've been assigned to campus %2$s.",
+  "Channel administration": "Channel administration",
+  "`!channel campus action type name`\n- replace *campus* with your campus full name, eg: \"REMOTE FR\"\n- replace *action* with **create**, **rename** or **delete**\n- replace *type* with **text** or **voice**\n- replace *name* with the channel name\n\nEg:\n- `!channel \"REMOTE FR\" create voice \"Let's chat\"`\n- `!channel NANTES delete text introduce-me`\n- `!channel TOULOUSE rename voice \"Pain au chocolat\" Chocolatine`\n\nVoice channel can have spaces and special characters, text channels will be automatically *slugify*, eg: *\"Pizza Time!\"* will become *pizza-time*.": "`!channel campus action type name`\n- replace *campus* with your campus full name, eg: \"REMOTE FR\"\n- replace *action* with **create**, **rename** or **delete**\n- replace *type* with **text** or **voice**\n- replace *name* with the channel name\n\nEg:\n- `!channel \"REMOTE FR\" create voice \"Let's chat\"`\n- `!channel NANTES delete text introduce-me`\n- `!channel TOULOUSE rename voice \"Pain au chocolat\" Chocolatine`\n\nVoice channel can have spaces and special characters, text channels will be automatically *slugify*, eg: *\"Pizza Time!\"* will become *pizza-time*.",
+  "No %1$s channel **%2$s** found in category **%3$s**.": "No %1$s channel **%2$s** found in category **%3$s**.",
+  "Channel **%s** created.": "Channel **%s** created.",
+  "Channel **%s** deleted.": "Channel **%s** deleted.",
+  "You need to specify a newchannel name, eg: `!channel campus rename type old-name new-name`": "You need to specify a newchannel name, eg: `!channel campus rename type old-name new-name`",
+  "Channel **%1$s** renamed to **%2$s**.": "Channel **%1$s** renamed to **%2$s**."
+}
