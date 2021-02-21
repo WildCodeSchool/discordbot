@@ -11,5 +11,7 @@
   "Channel **%s** created.": "Channel **%s** created.",
   "Channel **%s** deleted.": "Channel **%s** deleted.",
   "You need to specify a newchannel name, eg: `!channel campus rename type old-name new-name`": "You need to specify a newchannel name, eg: `!channel campus rename type old-name new-name`",
-  "Channel **%1$s** renamed to **%2$s**.": "Channel **%1$s** renamed to **%2$s**."
+  "Channel **%1$s** renamed to **%2$s**.": "Channel **%1$s** renamed to **%2$s**.",
+  "Channel **%1$s** already exists in category **%2$s**!": "Channel **%1$s** already exists in category **%2$s**!",
+  "No category **%s** found.": "No category **%s** found."
 }

@@ -44,6 +44,23 @@ module.exports = async (message, quotedArgs) => {
 
         switch (action) {
           case 'create':
+            const inChannel = server.channels.cache.find(
+              (channel) =>
+                channel.name.toLowerCase() === name.toLowerCase() &&
+                channel.type === type &&
+                channel.parent &&
+                channel.parent.id === category.id
+            )
+            if (inChannel) {
+              message.author.send(
+                i18n.__(
+                  'Channel **%1$s** already exists in category **%2$s**!',
+                  name,
+                  categoryName
+                )
+              )
+              return
+            }
             server.channels
               .create(name, {
                 type: type,
@@ -91,7 +108,7 @@ module.exports = async (message, quotedArgs) => {
                 channel.parent &&
                 channel.parent.id === category.id
             )
-            if (existingChannel) {
+            if (inChannel) {
               message.author.send(
                 i18n.__(
                   'Channel **%1$s** already exists in category **%2$s**!',
