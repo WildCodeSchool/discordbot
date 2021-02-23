@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node .",
     "dev": "nodemon",
-    "prestart": " && npx prisma generate",
+    "prestart": " npm run migrate:prod && npx prisma generate",
     "migrate:prod": "npx prisma migrate deploy --preview-feature",
     "migrate:dev": "npx prisma migrate dev --preview-feature",
     "migrate:reset": "npx prisma migrate reset --preview-feature"
