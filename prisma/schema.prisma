@@ -1,0 +1,28 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Campus {
+  id        String    @id @default(uuid())
+  city      String    @unique
+  links     Link[]
+  wilders   Wilder[]
+}
+
+model Link {
+  id        String    @id @default(uuid())
+  link      String
+  createdAt DateTime  @default(now())
+  weekNo    Int       @default(0)
+  campus    Campus    @relation(fields: [campusId], references:[id])
+  campusId  String
+}
+
