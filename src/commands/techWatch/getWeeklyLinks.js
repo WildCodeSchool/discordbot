@@ -13,7 +13,7 @@ async function getWeeklyLinks(message, city) {
         },
       },
     })
-    return message.channel.send('hello world', {
+    return message.channel.send({
       embed: {
         thumbnail: {
           url: 'https://avatars.githubusercontent.com/u/8874047?s=280&v=4',
