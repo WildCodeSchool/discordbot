@@ -4,6 +4,7 @@ const path = require('path')
 require('dotenv').config()
 const campusCommand = require('./commands/campus/campus.command')
 const channelCommand = require('./commands/channel/channel.command')
+const techWatchCommand = require('./commands/techWatch')
 
 i18n.configure({
   locales: ['en'],
@@ -30,6 +31,9 @@ client.on('message', async function (message) {
       break
     case 'channel':
       channelCommand(message, args)
+      break
+    case 'techwatch':
+      techWatchCommand(message, args)
       break
   }
 })
