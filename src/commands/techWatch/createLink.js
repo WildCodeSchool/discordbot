@@ -1,8 +1,12 @@
 const { getWeek } = require('date-fns')
 const db = require('../../../prisma/prismaClient')
+const { urlRegexp } = require('../../helpers/string.helper')
 
 async function createLink(message, link, city) {
   try {
+    if (!link.match(urlRegexp)) {
+      throw new Error('Please send a real url')
+    }
     const linkCount = await db.link.count({
       where: {
         link,
@@ -25,10 +29,31 @@ async function createLink(message, link, city) {
         campus: {
           connectOrCreate: {
             create: {
-              city: city,
+              city,
             },
             where: {
-              city: city,
+              city,
+            },
+          },
+        },
+        wilder: {
+          connectOrCreate: {
+            create: {
+              username: message.author.username,
+              id: message.author.id,
+              campus: {
+                connectOrCreate: {
+                  create: {
+                    city,
+                  },
+                  where: {
+                    city,
+                  },
+                },
+              },
+            },
+            where: {
+              id: message.author.id,
             },
           },
         },
