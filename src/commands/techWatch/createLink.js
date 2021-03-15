@@ -4,7 +4,7 @@ const { urlRegexp } = require('../../helpers/string.helper')
 
 async function createLink(message, link, city) {
   try {
-    if (!link.match(urlRegexp)) {
+    if (!link || !link.match(urlRegexp)) {
       throw new Error('Please send a real url')
     }
     const linkCount = await db.link.count({
